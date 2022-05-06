@@ -1,0 +1,22 @@
+
+Question : Link :https://practice.geeksforgeeks.org/problems/string-reversalunpublished-for-now5324/1#
+
+
+string reverseString(string s)
+{
+    unordered_map <char,int> map; // creating an hash map using the key as char and val as int 
+    string ans =""; //storing the ans in the `ans ` varible 
+    for(int i=s.size()-1;i>=0;i--){//travesing the String array from back side
+        if(s[i]==' '|| map[s[i]]==1){ //condition for if ' space ' and the letter repetedonce
+        //skip the letter or the space and continue 
+            continue;
+        }
+        else{
+            ans +=s[i]; //else append the letter to ans 
+            map[s[i]]=1; //creating an entry in the hash map if the letter  present in the  map 
+            
+        }
+    }
+    return ans; //finally return the ans in the output
+    //code here.
+}
