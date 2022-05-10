@@ -1,0 +1,19 @@
+link for the question 
+https://practice.geeksforgeeks.org/problems/plus-one/
+CODE
+
+class Solution {
+    static ArrayList<Integer> increment(ArrayList<Integer> arr , int N) {
+        // code here
+        for(int i =N-1;i>=0;i--){ //going to travesr the loop form back side 
+            if(arr[i]==9){ //condition if the number at arr[i] is 9 convert to 0
+                arr[i]=0;
+            }
+            else{
+                arr[i]++; //else increase the array
+                return arr; //return array 
+            }
+        }
+        arr.add(1,1); //if the two condition is done exit group and add 1 at the front etc
+    }
+};
